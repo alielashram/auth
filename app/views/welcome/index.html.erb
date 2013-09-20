@@ -1,0 +1,13 @@
+<h1>Welcome#index</h1>
+
+<%= link_to 'About Us', about_path %>
+<%= link_to 'Private Dashboard', dashboard_path %><br>
+
+<% if current_user? %>
+ <ul>
+   <% @users.each do |user| %>
+     <li><% user.email %></li>
+   <% end %>
+ </ul>
+<% end %>
+
